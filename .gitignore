@@ -9,6 +9,7 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
+/_BUILD
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
@@ -26,6 +27,8 @@
 # Visual Studio cache directory
 .vs/
 
+.vscode/
+.idea/
 # Gradle cache directory
 .gradle/
 
