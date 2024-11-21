@@ -1,0 +1,364 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 4026,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1994,
+      "max": [
+        0.977587044239044,
+        1.00959277153015,
+        3.58061599731445
+      ],
+      "min": [
+        -1.02130532264709,
+        -0.989298224449158,
+        -3.7534921169281
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1994,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 1994,
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 1994,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5125,
+      "count": 954,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 576,
+      "max": [
+        0.926239430904388,
+        0.958247900009155,
+        3.75537776947021
+      ],
+      "min": [
+        -0.96996009349823,
+        -0.937951683998108,
+        3.58061599731445
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5126,
+      "count": 576,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5126,
+      "count": 576,
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 9,
+      "componentType": 5126,
+      "count": 576,
+      "type": "VEC2"
+    }
+  ],
+  "asset": {
+    "generator": "Adobe Substance 3D Painter 10.1.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 16104,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 23928,
+      "byteOffset": 16104,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 23928,
+      "byteOffset": 40032,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 31904,
+      "byteOffset": 63960,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 15952,
+      "byteOffset": 95864,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3816,
+      "byteOffset": 111816,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 6912,
+      "byteOffset": 115632,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 6912,
+      "byteOffset": 122544,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 9216,
+      "byteOffset": 129456,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 4608,
+      "byteOffset": 138672,
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 143280,
+      "uri": "Blender.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "Material.007_baseColor.png"
+    },
+    {
+      "uri": "Material.007_occlusionRoughnessMetallic.png"
+    },
+    {
+      "uri": "Material.007_normal.png"
+    },
+    {
+      "uri": "Material.007_emissive.png"
+    },
+    {
+      "uri": "Material.009_baseColor.png"
+    },
+    {
+      "uri": "Material.009_occlusionRoughnessMetallic.png"
+    },
+    {
+      "uri": "Material.009_normal.png"
+    },
+    {
+      "uri": "Material.009_emissive.png"
+    }
+  ],
+  "materials": [
+    {
+      "alphaMode": "BLEND",
+      "emissiveFactor": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emissiveTexture": {
+        "index": 3
+      },
+      "name": "Material.007",
+      "normalTexture": {
+        "index": 2
+      },
+      "occlusionTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    },
+    {
+      "alphaMode": "BLEND",
+      "emissiveFactor": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emissiveTexture": {
+        "index": 7
+      },
+      "name": "Material.009",
+      "normalTexture": {
+        "index": 6
+      },
+      "occlusionTexture": {
+        "index": 5
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 4
+        },
+        "metallicRoughnessTexture": {
+          "index": 5
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Cylinder",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 2,
+            "POSITION": 1,
+            "TANGENT": 3,
+            "TEXCOORD_0": 4
+          },
+          "indices": 0,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Cylinder",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 7,
+            "POSITION": 6,
+            "TANGENT": 8,
+            "TEXCOORD_0": 9
+          },
+          "indices": 5,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode",
+      "scale": [
+        0.00999999977648258,
+        0.00999999977648258,
+        0.00999999977648258
+      ]
+    },
+    {
+      "children": [
+        2,
+        3
+      ],
+      "name": "Cylinder",
+      "rotation": [
+        -3.7748947079308e-08,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        54.4338989257812,
+        54.4338989257812,
+        398.843994140625
+      ],
+      "translation": [
+        -2.64697796016969e-21,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "mesh": 0,
+      "name": "Cylinder"
+    },
+    {
+      "mesh": 1,
+      "name": "Cylinder"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9985,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
+    },
+    {
+      "sampler": 0,
+      "source": 4
+    },
+    {
+      "sampler": 0,
+      "source": 5
+    },
+    {
+      "sampler": 0,
+      "source": 6
+    },
+    {
+      "sampler": 0,
+      "source": 7
+    }
+  ]
+}
