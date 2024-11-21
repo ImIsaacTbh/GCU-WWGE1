@@ -11,6 +11,8 @@ public class Jim : MonoBehaviour
     public GameObject SOOP;
 
     public GameObject bill;
+
+    public float modifier = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +35,7 @@ public class Jim : MonoBehaviour
                 projectile.SetActive(true);
                 projectile.transform.position = this.transform.position;
                 projectile.transform.rotation = this.transform.rotation;
-                projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.up * 1000f);
+                projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.up * 1000f * Random.Range(0f, 3f));
             }
 
             yield return Timing.WaitForSeconds(1);
