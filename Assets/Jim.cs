@@ -29,7 +29,7 @@ public class Jim : MonoBehaviour
     {
         while (true)
         {
-            if (Vector3.Distance(this.transform.position, bill.transform.position) < 200)
+            if (Vector3.Distance(this.transform.position, bill.transform.position) < 60)
             {
                 GameObject projectile = Instantiate(SOOP);
                 projectile.SetActive(true);

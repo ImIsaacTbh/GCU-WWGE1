@@ -16,11 +16,10 @@ public class Bill : MonoBehaviour
         var moveY = Input.GetAxis("Vertical");
         moveJump = Input.GetAxis("Jump");
         
-        GetComponent<Rigidbody>().AddForce(transform.forward*(moveY*walkSpeed));
-        GetComponent<Rigidbody>().AddForce(transform.right*(moveX*walkSpeed));
+        GetComponent<Rigidbody>().AddForce(transform.forward*(moveY*walkSpeed)*(Time.deltaTime*100));
+        GetComponent<Rigidbody>().AddForce(transform.right*(moveX*walkSpeed)*(Time.deltaTime*100));
         if (moveJump != 0 && !jump)
         {
-            Debug.Log("jumpjumpjumpjumjpujmupjumjpujmjmpumjpumjpumjpumjpumjumjpujmpumjupmjmujmujpumjpumjpumjpumjpumjpumjpumjmjmjmjpupupmjpupmjp");
             jump = true;
             GetComponent<Rigidbody>().AddForce(transform.up * 750);
             Timing.RunCoroutine(KeyCheck());
