@@ -12,6 +12,7 @@ public class LIDARMovement : MonoBehaviour
     public float sens;
     private float rot = 0f;
     public GameObject camera, player;
+    private bool canJump = true;
     
     void Start()
     {
@@ -44,8 +45,12 @@ public class LIDARMovement : MonoBehaviour
 
         int groundLayer = 1 << 9;
         bool isOnGround = Physics.Raycast(player.transform.position, -player.transform.up, 2.5f, groundLayer);
-        if (Input.GetAxisRaw("Jump") > 0 && isOnGround)
-        { rb.AddForce(player.transform.up * 75f); };
+        if (Input.GetAxisRaw("Jump") > 0 && isOnGround && canJump)
+        {
+            canJump = false;
+            rb.AddForce(player.transform.up * 75f);
+            Timing.CallDelayed(0.75f, () => { canJump = true; });
+        };
 
         #endregion
         #region Camera
