@@ -257,7 +257,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Smoothness",
     "m_StageCapability": 2,
-    "m_Value": 0.0,
+    "m_Value": -1.3600000143051148,
     "m_DefaultValue": 0.5,
     "m_Labels": []
 }
@@ -936,7 +936,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Occlusion",
     "m_StageCapability": 2,
-    "m_Value": 1.0,
+    "m_Value": -12.729999542236329,
     "m_DefaultValue": 1.0,
     "m_Labels": []
 }
@@ -1021,7 +1021,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Metallic",
     "m_StageCapability": 2,
-    "m_Value": 0.0,
+    "m_Value": -6.53000020980835,
     "m_DefaultValue": 0.0,
     "m_Labels": []
 }
