@@ -5,13 +5,8 @@ using UnityEngine;
 public class ScalerColorTextMeme : MonoBehaviour
 {
     public float baseScale;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    
+    //This is the text at the mirror
     void Update()
     {
         float scale = Mathf.Sin(Time.time) * baseScale;

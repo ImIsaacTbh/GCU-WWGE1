@@ -8,6 +8,7 @@ public class WeaponsController : MonoBehaviour
     public GameObject[] weapons;
     private GameObject activeWeapon;
     
+    //i was planning on adding more weapons and might if i revisit this project in the future
     private void Update()
     {
         if (Input.GetKeyUp(KeyCode.Alpha1))

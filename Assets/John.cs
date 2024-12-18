@@ -5,7 +5,11 @@ using UnityEngine;
 
 public class John : MonoBehaviour
 {
-    // Start is called before the first frame update
+    /// <summary>
+    /// Quite simple but the stop variable is again for the sweep
+    /// </summary>
+
+    public GameObject mainPlayer;
     public GameObject Bob;
     public float sens = 25f;
     private float rot = 0f;
@@ -15,11 +19,10 @@ public class John : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Timing.CallDelayed(1.5f, () => { stop = false; });   
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        if (stop) return;
+        if (stop || mainPlayer.GetComponent<Bill>().stop) return;
         float mouseX = Input.GetAxis("Mouse X") * sens;
         float mouseY = Input.GetAxis("Mouse Y") * sens;
         

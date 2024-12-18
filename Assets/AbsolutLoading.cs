@@ -10,16 +10,18 @@ using UnityEngine.SceneManagement;
 
 public class AbsolutLoading : MonoBehaviour
 {
+    /// <summary>
+    /// This is just a simple timing loop to simulate a loading screen
+    /// </summary>
     private float TimeSpentLoading = 0f;
-
+    
     private TextMeshProUGUI textbox;
-    // Start is called before the first frame update
+
     void Start()
     {
         textbox = GetComponent<TextMeshProUGUI>();
         Timing.RunCoroutine(dotdotdot());
     }
-
     IEnumerator<float> dotdotdot()
     {
         while (TimeSpentLoading < 9f)
@@ -28,7 +30,6 @@ public class AbsolutLoading : MonoBehaviour
             yield return Timing.WaitForSeconds(0.2f);
         }
     }
-    
     void Update()
     {
         Debug.Log(TimeSpentLoading);

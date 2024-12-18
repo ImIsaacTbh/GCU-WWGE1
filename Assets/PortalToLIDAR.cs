@@ -5,6 +5,7 @@ public class PortalToLIDAR : MonoBehaviour
 {
     public bool Reverse;
 
+    //this is the portal
     public void OnTriggerEnter(Collider other)
     {
         Debug.Log("CheckingCollision");

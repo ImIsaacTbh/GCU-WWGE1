@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LIDAR.unity
     guid: f27de638aae5e3542be5bb4e60bba28e
+  - enabled: 1
+    path: Assets/Scenes/LolYouDied.unity
+    guid: 1f062f19155965a4f9087351d4833b09
+  - enabled: 1
+    path: Assets/Scenes/WinnerWinnerChickenDinner.unity
+    guid: f5c98cfc1379bd54e8300a2591af470f
   m_configObjects: {}

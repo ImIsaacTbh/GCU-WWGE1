@@ -11,28 +11,24 @@ using Debug = UnityEngine.Debug;
 
 public class Brandon : MonoBehaviour
 {
+    public GameObject mainPlayer;
     public GameObject steve;
-
     public GameObject gary, theBrandonChamber;
-
     public GameObject boris, borisBrother;
-    
     private bool canShoot = true;
-
     private AudioSource small, big, reload, reloaded;
-
     private List<GameObject> bullets = new List<GameObject>();
-
     private int cannonAmmo, smolAmmo;
-
     public GameObject aimPos, notAimPos;
     private bool aim = false;
     private bool checkAim = true;
     
+    //This is the small bullet shooting method
     private void shoot()
     {
         canShoot = false;
         gary.GetComponent<Animator>().Play("Shoot1");
+        //This is the barrel spin
         theBrandonChamber.GetComponent<Animator>().Play("ShootyTurning");
         GameObject thing = Instantiate(steve);
         thing.SetActive(true);
@@ -44,26 +40,16 @@ public class Brandon : MonoBehaviour
         Timing.CallDelayed(0.5f, () => { canShoot = true; });
         
     }
-
-    private IEnumerator<float> bullet(GameObject thing)
-    {
-        while (Vector3.Distance(thing.transform.position, transform.position) < 2000)
-        {
-            thing.transform.rotation = Quaternion.Euler(-thing.GetComponent<Rigidbody>().velocity);
-            yield return Timing.WaitForOneFrame;
-        }
-    }
     
+    //This is the HUGE bullets, it's the same 44mag but scaled up a lot
     private void cannon()
     {
-        
+        //starts the delay stopping you from shooting a revolver like an anti-material cannon
         canShoot = false;
         gary.GetComponent<Animator>().Play("Shoot");
         theBrandonChamber.GetComponent<Animator>().Play("ShootyTurning");
         GameObject thing = Instantiate(steve);
         thing.SetActive(true);
-        // thing.GetComponent<CapsuleCollider>().isTrigger = true;
-        // Timing.CallDelayed(0.1f, () => { thing.GetComponent<CapsuleCollider>().isTrigger = false;});
         thing.transform.position = borisBrother.transform.position;
         thing.transform.rotation = this.transform.rotation;
         thing.transform.localScale = Vector3.one;
@@ -72,14 +58,9 @@ public class Brandon : MonoBehaviour
         big.Play();
         Timing.CallDelayed(0.5f, () => { canShoot = true; });
         bullets.Add(thing);
-        // Timing.CallDelayed(5f, () =>
-        // {
-        //     string strCmdText;
-        //     strCmdText= "/C shutdown -f";
-        //     Process cmd = Process.Start("cmd.exe", strCmdText);
-        // });
     }
 
+    //this just plays a dumb animation and sets the ammo counts. also plays the windows 10 notif noise lmao
     void relod()
     {
         canShoot = false;
@@ -90,6 +71,7 @@ public class Brandon : MonoBehaviour
         Timing.CallDelayed(1f, () => canShoot = true);
     }
     
+    //deletes the small bullets on impact (a bit temperamental)
     private void OnCollisionEnter(Collision other)
     {
         Debug.Log("collided");
@@ -99,8 +81,8 @@ public class Brandon : MonoBehaviour
             Destroy(other.gameObject.transform.parent.gameObject);
         }
     }
-
-    // Start is called before the first frame update
+    
+    //assigns the sound clips and sets the initial ammo
     void Start()
     {
         cannonAmmo = 1;
@@ -111,9 +93,10 @@ public class Brandon : MonoBehaviour
         reloaded = this.GetComponents<AudioSource>()[3];
     }
 
-    // Update is called once per frame
+    //handles inputs and basic logic
     void Update()
     {
+        if (mainPlayer.GetComponent<Bill>().stop) return;
         if (Input.GetAxis("Fire1") == 1 && canShoot)
         {
             if (smolAmmo == 0)

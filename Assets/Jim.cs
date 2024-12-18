@@ -9,22 +9,15 @@ using UnityEngine;
 public class Jim : MonoBehaviour
 {
     public GameObject SOOP;
-
     public GameObject bill;
-
     public float modifier = 1f;
-    // Start is called before the first frame update
+    
     void Start()
     {
         Timing.RunCoroutine(turret());
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    //This points the turret at the player, i didn't bother doing any arc calcs for accuracy on the turret but if i was to this is where it would be.
+    //It will shoot directly towards the player so depending on the range it will hit the ground
     public IEnumerator<float> turret()
     {
         while (true)

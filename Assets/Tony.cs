@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class Tony : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    /// <summary>
+    /// This entire script was for debug purposes and can be reactivated if needed later on
+    /// </summary>
     void Update()
     {
         // if (Input.GetKeyDown(KeyCode.R))

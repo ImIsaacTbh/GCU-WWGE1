@@ -14,6 +14,10 @@ public class LIDARMovement : MonoBehaviour
     public GameObject camera, player;
     private bool canJump = true;
     
+    /// <summary>
+    /// I made a whole new script for movement in the lidar space. I dont know why but i thought i might as well.
+    /// </summary>
+    
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -21,8 +25,8 @@ public class LIDARMovement : MonoBehaviour
 
     void Update()
     {
+        //This handles movement. This movement system has sprinting and sneaking built in.
         #region Movement
-
         if (Input.GetKeyDown(KeyCode.C))
         {
             player.transform.localScale = new Vector3(1f, 0.5f, 1f);
@@ -53,6 +57,8 @@ public class LIDARMovement : MonoBehaviour
         };
 
         #endregion
+        //This is a very simple camera rotation system. It rotates the camera up and down but rotates
+        //the player left and right so the rigidbody moves forwards in the right direction
         #region Camera
 
         float mouseX = Input.GetAxis("Mouse X") * sens;
